@@ -1,0 +1,86 @@
+// To Do List
+
+package project;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.ArrayList;
+
+public class ToDoList extends JFrame implements ActionListener {
+    DefaultListModel<String> taskListModel;
+    JList<String> taskList;
+    JTextField taskField;
+    JButton addButton, deleteButton, doneButton;
+
+    public ToDoList() {
+        setTitle("To-Do List");
+        setSize(400, 500);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLayout(null);
+
+        JLabel heading = new JLabel("To-Do List");
+        heading.setBounds(140, 10, 200, 30);
+        heading.setFont(new Font("Arial", Font.BOLD, 20));
+        add(heading);
+
+        taskField = new JTextField();
+        taskField.setBounds(30, 50, 240, 30);
+        add(taskField);
+
+        addButton = new JButton("Add Task");
+        addButton.setBounds(280, 50, 90, 30);
+        addButton.addActionListener(this);
+        add(addButton);
+
+        taskListModel = new DefaultListModel<>();
+        taskList = new JList<>(taskListModel);
+        JScrollPane scrollPane = new JScrollPane(taskList);
+        scrollPane.setBounds(30, 100, 320, 250);
+        add(scrollPane);
+
+        doneButton = new JButton("Mark as Done");
+        doneButton.setBounds(30, 370, 150, 30);
+        doneButton.addActionListener(this);
+        add(doneButton);
+
+        deleteButton = new JButton("Delete Task");
+        deleteButton.setBounds(200, 370, 150, 30);
+        deleteButton.addActionListener(this);
+        add(deleteButton);
+
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == addButton) {
+            String task = taskField.getText().trim();
+            if (!task.isEmpty()) {
+                taskListModel.addElement(task);
+                taskField.setText("");
+            } else {
+                JOptionPane.showMessageDialog(this, "Please enter a task.");
+            }
+        } else if (e.getSource() == deleteButton) {
+            int selectedIndex = taskList.getSelectedIndex();
+            if (selectedIndex != -1) {
+                taskListModel.remove(selectedIndex);
+            } else {
+                JOptionPane.showMessageDialog(this, "Please select a task to delete.");
+            }
+        } else if (e.getSource() == doneButton) {
+            int selectedIndex = taskList.getSelectedIndex();
+            if (selectedIndex != -1) {
+                String task = taskListModel.get(selectedIndex);
+                if (!task.startsWith("✔ ")) {
+                    taskListModel.set(selectedIndex, "✔ " + task);
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Please select a task to mark as done.");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        new ToDoList();
+    }
+}
