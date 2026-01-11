@@ -9,3 +9,4 @@ admin.site.register(UserFeedback)
 admin.site.register(PostModel)
 admin.site.register(ClaimOwner)
 admin.site.register(BkashPayment)
+
