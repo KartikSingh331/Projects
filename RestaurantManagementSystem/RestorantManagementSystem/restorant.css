@@ -1,0 +1,259 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    display: flex;
+    column-gap: 55%;
+    align-items: center;
+    height: 50px;
+    background: radial-gradient(circle, #dce2e8ce, #96dfee);
+   padding: 10px 10px;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+}
+.header a{
+    margin-left:20px;
+}
+.header img {
+    height: 49px;
+    border-radius: 100%;
+}
+
+.header a {
+    text-decoration: none;
+    color: #040303;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    color: antiquewhite;
+    opacity: 0.8;
+}
+.navbar {
+    height: 90vh;
+    background-image: linear-gradient(rgba(229, 235, 222, 0.2), rgba(11, 11, 12, 0.5)), url(foods.jpg);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.welcome-message {
+    font-size: 3rem;
+    color: #cf1937;
+    opacity: 0;
+    transform: translateX(100px);
+    animation: welcome 7s forwards;
+}
+
+@keyframes welcome {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.text-box p:hover {
+    font-family: Cursive;
+    color: #f44336;
+    transition: all 1s ease-in-out;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+    transition: all 2s;
+    border: 1px solid #f33311;
+    background: #d83407;
+    color: black;
+    transform: scale(1.1);
+}
+.btnt {
+    display: inline-block;
+    text-decoration: none;
+    color: #390ee2e3;
+    border: 1px solid #575213;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.btnt:hover {
+    transition: all 2s;
+    border: 1px solid #d9f311;
+    background: #a8db1e;
+    color: black;
+    transform: scale(1.1);
+}
+.featured-dishes {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.featured-dishes h2 {
+    font-family: "Pacifico", sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.dishes-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dish {
+    position: relative;
+    max-width: 300px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+}
+.dish h3,p{
+    margin-top: 10px;
+}
+
+.dish img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+/* .dish img:hover{
+    transform: scaleX(-1);
+} */
+
+.dish-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px); 
+}
+
+.dish:hover img {
+    transform: scaleX(-1);
+}
+
+.dish:hover .dish-name {
+    opacity: 1;
+    transform: translateY(0); 
+}
+.testimonials {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.testimonial-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-left: 5px solid #eca62c;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.reservation {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.reservation h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.reservation p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    justify-content: space-evenly;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #eca62c;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+.nav{
+    margin-left: 50%;
+    font-family: cursive;
+}
+.nav a{
+    text-decoration: none;
+    color: cornflowerblue;
+    opacity: 0.8;
+}
+.nav a:hover{
+    transform: scale(1.07);
+    transition: all 1s;
+    color: #f44336;
+}

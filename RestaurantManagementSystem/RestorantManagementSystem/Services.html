@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Services</title>
+    <link rel="website icon" type="avif" href="logo.avif">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("inner.jpg");
+        }
+
+        .services-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            background-image: url("bg.jpg");
+        }
+        a{
+            text-decoration: none;
+        }
+        .services-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .services-container {
+           cursor: pointer;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service-card {
+            text-decoration: none;
+            background: linear-gradient(135deg, #f9f9f9, #e8e8e8);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 260px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-icon {
+            text-decoration: none;
+            font-size: 4rem;
+            color: #e67e22;
+            margin-bottom: 15px;
+        }
+
+        .service-title {
+            text-decoration: none;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .service-description {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        .header {
+    display: flex;
+    column-gap: 55%;
+    align-items: center;
+    height: 50px;
+    background: radial-gradient(circle, #dce2e8ce, #96dfee);
+}
+.header a{
+    margin-left:20px;
+}
+.header img {
+    height: 49px;
+    border-radius: 100%;
+}
+
+.header a {
+    text-decoration: none;
+    color: #040303;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    color: antiquewhite;
+    opacity: 0.8;
+}
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    justify-content: space-evenly;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #eca62c;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="restorant.html" title="Home">
+            <img src="logo.avif" alt="Restaurant Logo">
+        </a>
+        <nav>
+            <a href="restorant.html">HOME</a>
+            <a href="Menu.html">MENU</a>
+            <a href="About.html">ABOUT US</a>
+            <a href="Services.html">SERVICES</a>
+            <a href="#down">CONTACT</a>
+        </nav>
+    </header>
+    <section class="services-section">
+        <h1 class="services-title">Our Services</h1>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">🍽</div>
+                <h2 class="service-title">Dine-In</h2>
+                <p class="service-description">Enjoy a premium dining experience in a cozy atmosphere.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🚚</div>
+                <h2 class="service-title">Home Delivery</h2>
+                <p class="service-description">Get your favorite dishes delivered right to your door.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎉</div>
+                <h2 class="service-title">Event Catering</h2>
+                <p class="service-description">Let us cater your special events with delicious meals.</p>
+            </div>
+            <a href="Menu.html">
+            <div class="service-card">
+                <div class="service-icon">☕</div>
+                <h2 class="service-title">Coffee & Snacks</h2>
+                <p class="service-description">Relax with our fresh coffee and quick bites.</p>
+            </div>
+            </a>
+        </div>
+    </section>
+    <footer class="footer">
+        <section class="footer-section" id="down">
+            <h4>Get to Know Us</h4>
+            <ul>
+                <li><a href="#">About Our Restaurant</a></li>
+                <li><a href="#">Restaurant Science</a></li>
+                <li><a href="#">Restaurant Food</a></li>
+                <li><a href="#">Food Prices</a></li>
+            </ul>
+        </section>
+        <section class="footer-section">
+            <h4>Connect With Us</h4>
+            <ul>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://twitter.com/">Twitter</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://linkedin.com/">LinkedIn</a></li>
+                <li>Email: <a href="mailto:contact@mywebsite.com">contact@mywebsite.com</a></li>
+            </ul>
+        </section>
+        <section class="footer-section">
+            <h4>For Restaurants</h4>
+            <ul>
+                <li><a href="#">Partner With Us</a></li>
+                <li><a href="#">Website for You</a></li>
+            </ul>
+        </section>
+        <section class="footer-section">
+            <h4>Learn More</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>

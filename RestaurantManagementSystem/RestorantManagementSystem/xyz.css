@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header nav a {
+    color: white;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    color: #ff6347;
+}
+
+/* Topic Styles */
+.Topic {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: #333;
+}
+
+/* Menu Grid Styles */
+.images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.container:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.foodname {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Button Group Styles */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-to-cart,
+.order-now {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart {
+    background-color: #28a745;
+    color: white;
+}
+
+.add-to-cart:hover {
+    background-color: #f6ff4e;
+    color: #28a745;
+}
+
+.order-now {
+    background-color: #007bff;
+    color: white;
+}
+
+.order-now:hover {
+    background-color: #0056b3;
+}
+
+.order-now a {
+    color: white;
+}
+
+/* Footer Styles */
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    justify-content: space-evenly;
+}
+.footer a {
+    text-decoration: none;
+    color: #eca62c;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
